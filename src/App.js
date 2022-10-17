@@ -7,7 +7,7 @@ import { CreateTodoButtom } from "./CreateTodoButtom";
 //import './App.css';
 
 const defaultTodos = [
-  {text: 'Cortar cebolla', completed: false},
+  {text: 'Cortar cebolla', completed: true},
   {text: 'Tomar el curso de intro a React', completed: false},
   {text: 'Llorar con la llorona', completed: false},
   { text: 'LALALALAA', completed: false },
@@ -25,7 +25,7 @@ function App() {
   if(!searchValue.length >= 1){
     searchedTodos = todos;
   } else{
-    searchedTodos.filter(todo => {
+   searchedTodos = todos.filter(todo => {
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
 
