@@ -9,6 +9,7 @@ import { AppUI } from './AppUI';
   { text: 'LALALALAA', completed: false },
 ]*/
 
+/*funcion de custom react hook para el manejo del estado de localstorage */
 function useLocalStorage(itemName, initialValue) {
   const localStorageItem = localStorage.getItem(itemName);
   let parsedItem;
@@ -34,7 +35,7 @@ function useLocalStorage(itemName, initialValue) {
   ];
 }
 
-
+/*Funcion para la logica del estado de la aplicacion y sus eventos  */
 function App() {
   
   const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
